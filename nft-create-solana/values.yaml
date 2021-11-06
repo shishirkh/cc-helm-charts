@@ -1,3 +1,3 @@
 replicas: 1
-image: shishirkhandelwal/nft-create-solana:12
+image: shishirkhandelwal/nft-create-solana:13
 
