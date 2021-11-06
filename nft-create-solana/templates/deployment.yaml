@@ -6,7 +6,7 @@ metadata:
     app: nft1
   name: nft1
 spec:
-  replicas: "{{ .Values.replicas }}"
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app: nft1
