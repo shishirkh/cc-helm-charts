@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: game
+  name: game
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: game
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: game
+    spec:
+      containers:
+      - image: "{{ .Values.image }}" 
+        name: game
+        command: ["/bin/bash","-c","npm run-script start"]
+        resources: {}
+status: {}
