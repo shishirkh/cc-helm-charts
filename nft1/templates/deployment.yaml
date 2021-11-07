@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nft1
+  name: nft1
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: nft1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nft1
+    spec:
+      containers:
+      - image: "{{ .Values.image }}" 
+        name: nft
+        command: ["/bin/bash","-c","npm run-script start"]
+        resources: {}
+status: {}
