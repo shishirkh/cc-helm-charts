@@ -4,7 +4,7 @@ metadata:
   creationTimestamp: null
   labels:
     app: APP_NAME_PLACEHOLDER
-  name: APP_NAME_PLACEHOLDER
+  name: NAMESPACE
 spec:
   replicas: {{ .Values.replicas }}
   selector:
